@@ -1,0 +1,25 @@
+
+plugin=/home/shgli/src/Plugin CD=build filter="*.h *.cpp *.hpp *.txt" {
+ CMakeLists.txt
+ cmake=cmake {
+ }
+ plugin=plugin {
+  CMakeLists.txt
+  include=include {
+   IPlugin.h
+   PluginManager.h
+  }
+  src=src {
+   CMakeLists.txt
+  }
+ }
+ pluginService=pluginService {
+  CMakeLists.txt
+  client=client {
+   CMakeLists.txt
+  }
+  server=server {
+   CMakeLists.txt
+  }
+ }
+}
