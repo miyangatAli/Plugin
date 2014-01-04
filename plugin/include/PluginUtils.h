@@ -15,6 +15,7 @@
 static Plugin* PLUGIN_INSTANCE = nullptr;
 void PLUGIN_INIT_FUNC( void )
 {
+    PLUGIN_INSTANCE = new Plugin();
     BOOST_PP_SEQ_FOR_EACH(PLUGIN_REGISTER,~,PLUGIN_INTERFACES)
 }
 

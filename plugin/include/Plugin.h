@@ -6,7 +6,7 @@
 #include <boost/make_shared.hpp>
 #include <boost/function.hpp>
 #include <boost/mpl/vector.hpp>
-#include <boost/mpl/at.hpp>
+#include <boost/mpl/back.hpp>
 #include <boost/mpl/contains.hpp>
 #include <boost/mpl/inherit_linearly.hpp>
 #include <boost/unordered/unordered_map.hpp>
@@ -117,12 +117,12 @@ struct PluginImpl:public boost::mpl::inherit_linearly<IfVec,PluginIfCreator<boos
 
     void Merge(const PluginImpl* plugin)
     {
-	this->DoMerge(PluginIfTag<typename boost::mpl::at_c<IfVec,0>::type>(),plugin);
+	this->DoMerge(PluginIfTag<typename boost::mpl::back<IfVec>::type>(),plugin);
     }
 
     void Exclude(const PluginImpl* plugin)
     {
-    	this->DoExclude(PluginIfTag<typename boost::mpl::at_c<IfVec,0>::type>(),plugin);
+    	this->DoExclude(PluginIfTag<typename boost::mpl::back<IfVec>::type>(),plugin);
     }
 };
 
