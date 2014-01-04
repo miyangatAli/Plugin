@@ -6,11 +6,31 @@ plugin=/home/shgli/src/Plugin CD=build filter="*.h *.cpp *.hpp *.txt" {
  plugin=plugin {
   CMakeLists.txt
   include=include {
-   IPlugin.h
+   Plugin.h
    PluginManager.h
+   PluginUtils.h
+   Singleton.h
+   PluginManager.hpp
   }
   src=src {
    CMakeLists.txt
+  }
+  example=example{
+   ExamplePlugin.h
+   IPrint.h
+   IPrint2.h
+   main.cpp
+   CMakeLists.txt
+   plugin1=plugin1{
+    Plugin1.h
+    Plugin1Info.cpp
+    CMakeLists.txt
+   }
+   pulgin2=plugin2{
+    Plugin2.h
+    Plugin2Info.cpp
+    CMakeLists.txt
+   }
   }
  }
  pluginService=pluginService {

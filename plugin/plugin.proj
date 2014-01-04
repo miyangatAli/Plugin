@@ -1,0 +1,66 @@
+
+plugin=/home/shgli/src/Plugin/plugin CD=build filter="*.h *.hpp *.txt" {
+ CMakeLists.txt
+ build=build {
+  CMakeCache.txt
+  install_manifest.txt
+  CMakeFiles=CMakeFiles {
+   TargetDirectories.txt
+   2.8.11.2=2.8.11.2 {
+    CompilerIdC=CompilerIdC {
+    }
+    CompilerIdCXX=CompilerIdCXX {
+    }
+   }
+   CMakeTmp=CMakeTmp {
+   }
+  }
+  bin=bin {
+  }
+  example=example {
+   CMakeFiles=CMakeFiles {
+    PluginExample.dir=PluginExample.dir {
+     link.txt
+    }
+   }
+   plugin1=plugin1 {
+    CMakeFiles=CMakeFiles {
+     Plugin1.dir=Plugin1.dir {
+      link.txt
+     }
+    }
+   }
+   plugin2=plugin2 {
+    CMakeFiles=CMakeFiles {
+     Plugin2.dir=Plugin2.dir {
+      link.txt
+     }
+    }
+   }
+  }
+ }
+ example=example {
+  ExamplePlugin.h
+  IPrint.h
+  IPrint2.h
+  CMakeLists.txt
+  plugin1=plugin1 {
+   Plugin1.h
+   CMakeLists.txt
+  }
+  plugin2=plugin2 {
+   Plugin2.h
+   CMakeLists.txt
+  }
+ }
+ include=include {
+  Plugin.h
+  PluginManager.h
+  PluginUtils.h
+  Singleton.h
+  PluginManager.hpp
+ }
+ src=src {
+  CMakeLists.txt
+ }
+}

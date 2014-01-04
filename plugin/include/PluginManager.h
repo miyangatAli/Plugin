@@ -1,13 +1,21 @@
 #ifndef __PLUGINMANAGER_H
 #define __PLUGINMANAGER_H
-
-class PluginManager: public Singleton<PluginManager>
+#include "Plugin.h"
+#include "Singleton.h"
+template<typename IfVec>
+class PluginManagerImpl: public Singleton<PluginManagerImpl<IfVec> >
+		   , public PluginImpl<IfVec>
 {
 public:
-    void Load();
+    typedef PluginImpl<IfVec>& GetHandle( void );
+    void Load(const std::string& fileName);
+    void UnLoad(const std::string& fileName);
 
-    Create(const std::string& name);
+private:
+    GetHandle* GetHandleFun(const std::string ileName);
 };
+
+#include "PluginManager.hpp"
 #endif
 
 
