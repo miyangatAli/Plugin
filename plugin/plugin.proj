@@ -44,6 +44,7 @@ plugin=/home/shgli/src/Plugin/plugin CD=build filter="*.h *.hpp *.txt *.cpp" {
   IPrint.h
   IPrint2.h
   CMakeLists.txt
+  main.cpp
   plugin1=plugin1 {
    Plugin1.h
    CMakeLists.txt

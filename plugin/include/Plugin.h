@@ -71,7 +71,15 @@ public:
 
     void DoExclude(Tag tag,const PluginIfCreator* plugins)
     {
-	mCreatores.erase(plugins->DoGetIfCreatorMap(tag).begin(),plugins->DoGetIfCreatorMap(tag).end());
+	//mCreatores.erase(plugins->DoGetIfCreatorMap(tag).begin(),plugins->DoGetIfCreatorMap(tag).end());
+	for(auto itSrcRm : plugins->DoGetIfCreatorMap(tag))
+	{
+	    auto itRm = mCreatores.find(itSrcRm.first);
+	    if(itRm != mCreatores.end())
+	    {
+	        mCreatores.erase(itRm);
+	    }
+	}
 	DoExclude(typename More::Tag(),plugins);
     }
 
